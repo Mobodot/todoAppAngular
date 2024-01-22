@@ -1,0 +1,74 @@
+<main class="main">
+  <div class="main__background-img"></div>
+  <div class="main__wrapper">
+    <header class="header container">
+      <h2>TODO</h2>
+      <div class="header__display">
+        <img src="../assets/images/icon-sun.svg" alt="sun-icon" />
+      </div>
+    </header>
+    <section class="todo container">
+      <div class="todo__input">
+        <div class="todo__checkbox"></div>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          #task
+          (keyup.enter)="onEnter(task)"
+        />
+      </div>
+      <ul class="todo__list">
+        <li
+          *ngFor="let todo of todos"
+          class="todo__list-item-wrapper"
+          [class.checked]="todo.isCompleted"
+        >
+          <div class="todo__list-item">
+            <div (click)="toggleCheck(todo.id)" class="todo__checkbox">
+              <img src="../assets/images/icon-check.svg" alt="icon-check" />
+            </div>
+            <p class="todo__text" [class.strike-text]="todo.isCompleted">
+              {{ todo.task }}
+            </p>
+          </div>
+          <div class="todo__close" (click)="removeTodo(todo.id)">
+            <img src="../assets/images/icon-cross.svg" alt="icon-cross" />
+          </div>
+        </li>
+      </ul>
+
+      <ul class="todo__footer">
+        <li class="todo__footer-count">
+          <p>{{ counter }} items left</p>
+        </li>
+        <li class="todo__actions">
+          <p
+            [ngClass]="{ selected: current === 'all' }"
+            (click)="viewAllTodos()"
+          >
+            All
+          </p>
+          <p
+            [ngClass]="{ selected: current === 'active' }"
+            (click)="viewActiveTodos()"
+          >
+            Active
+          </p>
+          <p
+            [ngClass]="{ selected: current === 'completed' }"
+            (click)="viewCompletedTodos()"
+          >
+            Completed
+          </p>
+        </li>
+        <li class="todo__clear">
+          <p (click)="clearCompletedTodos()">Clear Completed</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer container">
+      <p>Drag and drop to reorder list</p>
+    </footer>
+  </div>
+</main>

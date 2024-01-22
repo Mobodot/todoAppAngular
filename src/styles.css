@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /*  dark mode colors */
+  --clr-very-dark-blue: hsl(235, 21%, 11%);
+  --clr-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --clr-light-gray-blue: hsl(234, 39%, 85%);
+  --clr-light-gray-blue-hover: hsl(236, 33%, 92%);
+  --clr-dark-gray-blue: hsl(234, 11%, 52%);
+  --clr-very-dark-gray-blue: hsl(233, 14%, 35%);
+  --clr-very-dark-gray-blue-striked: hsl(237, 14%, 26%);
+  --clr-very-light-gray: hsl(0, 0%, 98%);
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--size-lg);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
