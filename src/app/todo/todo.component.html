@@ -1,0 +1,27 @@
+<li
+  class="todo__list-item-wrapper"
+  [class.checked]="todoProps.isCompleted"
+  [class.editing]="isEditingProps"
+  (dblclick)="setTodoInEditMode()"
+>
+  <div class="todo__list-item">
+    <div class="todo__checkbox" (click)="toggleCheck(todoProps.id)">
+      <img src="{{ checkImgUrl }}" alt="icon-check" />
+    </div>
+    <p class="todo__text">
+      {{ todoProps.task }}
+    </p>
+  </div>
+  <div class="todo__close" (click)="removeTodo(todoProps.id)">
+    <img src="{{ closeImgUrl }}" alt="icon-cross" />
+  </div>
+  <div *ngIf="isEditingProps" class="todo__list-item-edit">
+    <input
+      type="text"
+      autofocus
+      [value]="editingText"
+      (keyup)="changeText($event)"
+      (keyup.enter)="changeTodo()"
+    />
+  </div>
+</li>

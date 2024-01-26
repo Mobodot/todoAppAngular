@@ -1,0 +1,11 @@
+<div class="todo__input">
+  <div class="todo__checkbox"></div>
+  <input
+    type="text"
+    placeholder="Create a new todo..."
+    autofocus
+    (keyup)="changeText($event)"
+    (keyup.enter)="addTodo()"
+    [value]="task"
+  />
+</div>

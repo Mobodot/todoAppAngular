@@ -1,0 +1,44 @@
+.todo__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 5px 15px 5px;
+  background-color: var(--clr-very-dark-desaturated-blue);
+  border-radius: 5px;
+}
+
+.todo__footer li > p {
+  font-size: 14px;
+}
+
+.todo__footer-count p {
+  color: var(--clr-very-dark-gray-blue);
+}
+
+.todo__actions p {
+  color: var(--clr-very-dark-gray-blue);
+  cursor: pointer;
+}
+
+.todo__actions p:hover {
+  color: var(--clr-light-gray-blue);
+}
+
+.todo__clear p {
+  color: var(--clr-very-dark-gray-blue);
+  cursor: pointer;
+}
+
+.todo__clear p:hover {
+  color: var(--clr-light-gray-blue);
+}
+
+.todo__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo__actions .selected {
+  color: blue;
+}

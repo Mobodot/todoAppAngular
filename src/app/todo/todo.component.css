@@ -1,0 +1,82 @@
+.todo__list-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  border-bottom: 1px solid var(--clr-very-dark-gray-blue);
+  padding: 5px 15px 5px;
+}
+
+.todo__list-item {
+  display: flex;
+  gap: 10px;
+}
+
+.todo__list-item-wrapper .todo__checkbox img {
+  display: none;
+}
+
+.checked .todo__checkbox {
+  background: linear-gradient(180deg, #57ddff, #c058f3);
+}
+
+.checked .todo__checkbox img {
+  display: inline;
+  margin-bottom: 3px;
+}
+
+.todo__text {
+  color: var(--clr-light-gray-blue);
+}
+
+.todo__list-item .strike-text {
+  text-decoration: line-through;
+  color: var(--clr-very-dark-gray-blue);
+}
+
+.todo__close {
+  cursor: pointer;
+}
+
+.todo__close img {
+  width: 0;
+}
+
+.todo__list-item-wrapper:hover .todo__close img {
+  width: 15px;
+  transition: all 0.3s;
+}
+
+.todo__list-item-edit {
+  display: none;
+}
+
+.editing {
+  justify-content: unset;
+}
+
+.editing .todo__checkbox {
+  visibility: hidden;
+}
+
+.editing .todo__text {
+  display: none;
+}
+
+.editing .todo__close {
+  display: none;
+}
+
+.editing .todo__list-item-edit {
+  display: block;
+  height: 40px;
+  width: 100%;
+}
+
+.editing .todo__list-item-edit input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+}
